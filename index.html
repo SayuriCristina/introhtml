@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu perfil</title>
+    <link href="assets\style\style.css" rel="stylesheet">
 </head>
 
 <body>
     <nav>
-        <ul>
+        <ul class="menu">
             <li>
                 <a href="index.html">Home</a>
             </li>
@@ -18,54 +19,65 @@
             </li>
             </li>
             <li>
-                <a href="curriculo.html">Curriculo</a>
+                <a href="curriculo.html">Currículo</a>
             </li>
             </li>
         </ul>
     </nav>
 
     <main>
-        <section>
-            <h1> Sobre a Sayuri </h1>
-            <img src="assets\beautiful-young-asian-woman-with-glasses-standing-airport_893012-76663.jpg"
-                alt="Foto gerada por inteligência artificial: Mulher asiática jovem de olhos castanhos e cabelo castanho médio. Usa um óculos preto e está sorrindo."
-                width="435">
-            <p>
-                Meu nome é Sayuri Cristina, tenho 20 anos e sou de Mauá, São Paulo. Minha jornada na tecnologia
-                começou há cerca de dois anos, quando participei de um curso introdutório de desenvolvimento web
-                voltado especificamente para mulheres.
-                Na época, eu trabalhava como professora de inglês, o que foi fundamental para meu desenvolvimento de
-                comunicação efetiva, adaptabilidade, organização, colaboração e pensamento crítico, além de aprimorar
-                ainda mais minha proficiência do idioma - que, atualmente, é certificada internacionalmente como C1 pelo
-                TOEFL ITP.
-            </p>
-            <p>
-                Com o crescimento da minha paixão pela tecnologia, decidi me dedicar integralmente à área.
-                Recentemente, concluí um bootcamp imersivo em desenvolvimento Fullstack, onde aprendi a utilizar as
-                linguagens e frameworks Java, Spring, JavaScript e React e ferramentas para banco de dados, como SQL e
-                para versionamento, como Git. Essa experiência me permitiu aplicar meu conhecimento na resolução de
-                problemas reais e na criação de impactos positivos, exemplificado por um projeto em equipe completo
-                baseado em uma das ODSs da ONU, além de outros projetos pessoais. Atualmente, estou no segundo semestre
-                de Bacharelado em Tecnologia da Informação.
-            </p>
-            <p>
-                Olhando para o futuro, meu objetivo é me envolver em projetos mais ambiciosos, onde possa aplicar minhas
-                habilidades para impulsionar a inovação no mundo tech. Aspiro me especializar como desenvolvedora
-                fullstack e estou comprometida em continuar aprendendo e crescendo. Estou aberta a novas oportunidades
-                que me desafiem e me permitam contribuir de maneira significativa. Com isso, acredito ser a pessoa ideal
-                para esta posição.
-            </p>
+        <section class="sobre">
+            <h1 class="heading"> Sobre a Sayuri </h1>
+            <section class="conteudo">
+                <img src="assets\img\beautiful-young-asian-woman-with-glasses-standing-airport_893012-76663.jpg"
+                    alt="Foto gerada por inteligência artificial: Mulher asiática jovem de olhos castanhos e cabelo castanho médio. Usa um óculos preto e está sorrindo."
+                    width="450" height="300">
+                <p id="paragrafo1" class="paragrafos">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam libero libero, vehicula eget blandit
+                    non,
+                    consectetur nec lorem. Nulla hendrerit bibendum quam, a viverra ante bibendum vel. Nunc ac mi
+                    venenatis,
+                    sollicitudin nisi nec, blandit lorem. Curabitur sed luctus libero. Fusce sem nulla, maximus in
+                    fermentum
+                    eu, placerat quis erat. Duis finibus tristique vulputate. Aliquam erat volutpat. Nulla a convallis
+                    est.
+                </p>
+                <p id="paragrafo2" class="paragrafos">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam libero libero, vehicula eget blandit
+                    non,
+                    consectetur nec lorem. Nulla hendrerit bibendum quam, a viverra ante bibendum vel. Nunc ac mi
+                    venenatis,
+                    sollicitudin nisi nec, blandit lorem. Curabitur sed luctus libero. Fusce sem nulla, maximus in
+                    fermentum
+                    eu, placerat quis erat. Duis finibus tristique vulputate. Aliquam erat volutpat. Nulla a convallis
+                    est.
+                </p>
+                <p id="paragrafo3" class="paragrafos">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam libero libero, vehicula eget blandit
+                    non,
+                    consectetur nec lorem. Nulla hendrerit bibendum quam, a viverra ante bibendum vel. Nunc ac mi
+                    venenatis,
+                    sollicitudin nisi nec, blandit lorem. Curabitur sed luctus libero. Fusce sem nulla, maximus in
+                    fermentum
+                    eu, placerat quis erat. Duis finibus tristique vulputate. Aliquam erat volutpat. Nulla a convallis
+                    est.
+                </p>
+            </section>
         </section>
 
-        <section>
-            <h2> Meu vídeo </h2>
-            <iframe width="435" height="245" src="https://www.youtube.com/embed/VoUN8JKs4OE"
-                title="Softcult on Audiotree Live (Full Session)" frameborder="0"
+        <section class="video">
+            <h2 class="heading"> Meu vídeo </h2>
+            <iframe width="435" height="250" src="https://www.youtube.com/embed/VoUN8JKs4OE"
+                title="Softcult on Audiotree Live" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="435" height="250" src="https://www.youtube.com/embed/vA7DyyWpvgk"
+                title="Castlevania: A Sinfonia das Reviews" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 
     </main>
-
 </body>
+
 </html>
