@@ -9,18 +9,17 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="menu">
         <ul class="menu">
-            <li>
+            <li id="pagHome">
                 <a href="index.html">Home</a>
             </li>
-            <li>
+            <li id="pagContato">
                 <a href="contato.html">Contato</a>
             </li>
             </li>
-            <li>
-                <a href="curriculo.html">Curriculo</a>
-            </li>
+            <li id="pagCurriculo">
+                <a href="curriculo.html">Currículo</a>
             </li>
         </ul>
     </nav>
@@ -31,12 +30,13 @@
 
             <section>
                 <h3 class="heading">Resumo Profissional</h3>
-                <p>
+                <p id="resumo">
                     Graduanda em Bacharelado em Tecnologia da Informação, atualmente procurando uma oportunidade de
                     estágio
-                    como desenvolvedor Fullstack. Interesse e ênfase acentuado em Java, mas com conhecimento de HTML,
-                    CSS,
-                    JavaScript, React e de banco de dados em SQL. Familiarizada com metodologias ágeis, tal como SCRUM,
+                    como desenvolvedora Fullstack. Interesse e ênfase em <span> Java (Spring), HTML,
+                        CSS,
+                        JavaScript, React e de banco de dados em SQL.</span> Familiarizada com metodologias ágeis, tal
+                    como SCRUM,
                     e
                     com a utilização de tecnologias de versionamento, como Github.
                     Inglês avançado/fluente e experiência com a docência do mesmo, essenciais para a evolução das
@@ -104,14 +104,15 @@
 
             <section>
                 <h3 class="heading">Idiomas</h3>
-                <p>Inglês - Avançado/Fluente</p>
+                <p><span>Inglês</span> - Avançado/Fluente</p>
             </section>
 
             <section>
                 <h3 class="heading">Portfólio</h3>
                 <div class="projetos">
                     <h4>Instituição Bancária</h4>
-                    <a href="https://github.com/SayuriCristina/ProjetoContaBancaria" target="_blank" class="repositorio" id="instituicao">Repositório</a>
+                    <a href="https://github.com/SayuriCristina/ProjetoContaBancaria" target="_blank" class="repositorio"
+                        id="instituicao">Repositório</a>
                 </div>
                 <p>
                     Projeto realizado na linguagem Java de uma instituição bancária com funcionalidades como criação,
@@ -123,7 +124,8 @@
                 </p>
                 <div class="projetos">
                     <h4>Blog Pessoal</h4>
-                    <a href="https://github.com/SayuriCristina/blogPessoal" target="_blank" class="repositorio">Repositório</a>
+                    <a href="https://github.com/SayuriCristina/blogPessoal" target="_blank"
+                        class="repositorio">Repositório</a>
                 </div>
                 <p>
                     Projeto realizado na linguagem Java de um blog com funcionalidades
@@ -136,7 +138,7 @@
                 <h3 class="heading">Cursos Extracurriculares e Certificações</h3>
                 <ul>
                     <li>
-                        <p>Curso de Inglês</p>
+                        <p class="certificacao">Curso de Inglês</p>
                         <ul>
                             <li>
                                 <p>SKILL Idiomas</p>
@@ -150,7 +152,7 @@
                         </ul>
                     </li>
                     <li>
-                        <p>Certificação TOEFL C1</p>
+                        <p class="certificacao">Certificação TOEFL C1</p>
                         <ul>
                             <li>
                                 <p>TOEFL ITP</p>
@@ -161,7 +163,7 @@
                         </ul>
                     </li>
                     <li>
-                        <p>Curso Microsoft Office</p>
+                        <p class="certificacao">Curso Microsoft Office</p>
                         <ul>
                             <li>
                                 <p>Escola do Trabalhadors</p>

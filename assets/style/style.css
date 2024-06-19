@@ -1,42 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+:root {
+  --soft-violet: #8672cf;
+  --dark-violet: #26184b;
+  --whitey: #eaeaea;
+  --soft-lilac: #bcb1e4;
+  --medium-violet: #442b88;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(#8e77c7, #513891);
-  color: #ffffff;
-}
-
-.heading {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #1e0f35;
-  font-weight: 700;
-  font-style: italic;
-  text-align: center;
-}
-
-h1 {
-  font-size: 60px;
-}
-
-p {
-  font-style: bold;
-  line-height: 1.3;
+  background: radial-gradient(circle 1920px at center, var(--soft-violet), var(--medium-violet));
+  color: var(--whitey);
+  margin-bottom: 2rem;
+  max-width: 100vw;
 }
 
 .menu {
-  background-color: #1e0f35;
-  list-style-type: none;
+  background: var(--dark-violet);
   display: flex;
-  gap: 100px;
-  font-size: 24px;
+  justify-content: center;
+  font-size: 25px;
   width: 100%;
-  height: 40px;
+  height: 50px;
   position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
+  align-items: center;
+  box-shadow: 0 0px 10px 3px var(--dark-violet);
 }
-
+.menu ul{
+  max-width: 80%;
+  justify-content: space-between;
+  box-shadow: unset;
+}
 .menu a {
+  font-family: "Madimi One", system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   text-decoration: none;
   color: white;
   display: flex;
@@ -44,27 +49,93 @@ p {
   padding: 5px 0px 0px 10px;
   font-style: italic;
 }
+.menu a:hover {
+  color: var(--soft-lilac);
+}
+
+.heading {
+  font-family: "Madimi One", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--dark-violet);
+  font-style: italic;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-size: 60px;
+  padding: 65px 0 40px 0;
+  text-shadow: 0 0 3px var(--dark-violet);
+}
+
+p {
+  font-weight: 550;
+  line-height: 1.3;
+  text-shadow: 0 0 2px 6px var(--dark-violet);
+}
+
+.sobre{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .conteudo {
-  text-align: left;
   align-items: center;
   display: flex;
+  min-width: 1000px;
   width: 60%;
-  margin: 0 20%;
-  gap: 40px;
+  gap: 2em;
+}
+@media screen and (max-width:600px){
+  .conteudo{
+    max-width: 600px;
+    min-width: 400px;
+    flex-direction: column;
+  }
+
+  img{
+    max-width: 300px;
+    height:fit-content;
+    width: fit-content;
+  }
+
+  iframe{
+    max-width: 300px;
+    height:fit-content;
+    width: fit-content;
+  }
+  .formulario{
+    padding: 0 15px;
+    max-width: 60%;
+  }
+  #assunto {
+    max-width: 40%;
+  }
+  .form {
+    display: flex;
+    flex-direction:column;
+  }
+  
 }
 
 .paragrafos {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 img {
-  border: 5px dotted #1e0f35;
+  padding: 5px;
+  border: 10px dotted var(--dark-violet);
   border-radius: 100%;
+  object-fit: cover;
 }
 
 iframe {
-  border: 5px dashed #1e0f35;
+  border: 5px dashed var(--dark-violet);
+  border-radius: 15px;
+  object-fit: cover;
 }
 
 .form {
@@ -74,11 +145,10 @@ iframe {
 }
 
 .formulario {
-  border: 5px dotted #1e0f35;
-  background-color: #4d3785;
-  padding: 15px;
-  border-radius: 20px;
-  width: 60%;
+  border: 5px dotted var(--whitey);
+  background: linear-gradient(var(--dark-violet), var(--medium-violet));
+  padding: 15px 40px;
+  border-radius: 12px;
   display: inline-flexbox;
 }
 
@@ -88,63 +158,70 @@ iframe {
   gap: 5px;
 }
 
-#nome {
-  border: 5px solid #8e77c7;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-#email {
-  border: 5px solid #8e77c7;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
+#nome,
+#email,
 #assunto {
-  border: 5px solid #8e77c7;
-  border-radius: 10px;
+  border: 3px solid var(--soft-lilac);
+  border-radius: 6px;
   margin-bottom: 10px;
-  margin-right: 10px;
 }
 
-#contato {
-  padding: 25px 0px 0px;
-  font-size: 40px;
+button:hover {
+  background-color: var(--soft-lilac);
+  color: var(var(--medium-violet));
+  cursor: pointer;
 }
+
 
 #endereco {
   font-size: 20px;
+  padding-top: 20px;
 }
 
 .curriculo {
   display: flex;
   text-align: left;
-  width: 85%;
+  width: 70%;
   margin: 0 auto;
 }
 
-#nomeCuriculo {
-  padding: 25px 0px 0px;
-  font-size: 40px;
-  width: 100%;
+
+.curriculo ul li {
+  list-style: initial;
+  margin: 0 0 0 15px;
+}
+
+.curriculo ul ul li {
+  list-style: square;
+  margin: 0 0 0 15px;
+}
+
+.curriculo h2 {
+  padding: 65px 0 0;
 }
 
 .curriculo h3 {
-  font-size: 25px;
+  font-size: 30px;
+  padding: 25px 0 0;
 }
 
-h4 {
-  font-size: 18px;
+.curriculo h4 {
+  font-size: 20px;
+  color: var(--dark-violet);
+  padding: 15px 0 0 0;
+}
+
+#resumo{
+  padding: 10px 0 0 0;
 }
 
 .projetos {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
-  gap: 85%;
-  align-items: baseline;
+  align-items:baseline;
   font-style: italic;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 0 0 0;
 }
 
 .repositorio {
@@ -154,5 +231,19 @@ h4 {
   font-style: italic;
   padding: 4px;
   border: 2px dashed #ffffff;
-  background-color: #1e0f35;
+  background-color: var(--medium-violet);
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+
+span {
+  color: var(--dark-violet);
+}
+
+.certificacao {
+  color: var(--dark-violet);
+}
+
+.simbolos{
+  white-space: nowrap; 
 }
