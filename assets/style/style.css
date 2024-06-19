@@ -87,7 +87,7 @@ p {
   width: 60%;
   gap: 2em;
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:900px){
   .conteudo{
     max-width: 600px;
     min-width: 400px;
@@ -125,10 +125,13 @@ p {
   text-align: left;
 }
 
-img {
+#icone {
   padding: 5px;
   border: 10px dotted var(--dark-violet);
   border-radius: 100%;
+}
+
+img {
   object-fit: cover;
 }
 
@@ -246,4 +249,95 @@ span {
 
 .simbolos{
   white-space: nowrap; 
+}
+
+.imagens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+@media (max-width:900px) {
+  .imagens {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      /* Ajusta a tabela */
+      grid-template-rows: repeat(2, auto);
+  }
+}
+
+.imagens .cartao {
+  /* Faz com que as descrições consigam se mexer junto com a imagem*/
+  position: relative;
+
+  width: 200px;
+  height: auto;
+
+  /* Faz com que as imagens não deem overlap*/
+  overflow: hidden;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  border: 5px dashed var(--dark-violet);
+}
+
+.imagens .cartao img {
+  /* Garante que a imagem ocupe todo o espaço disponível no cartão */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Centraliza a imagem */
+}
+
+.imagens .cartao .descricoes {
+  /* Faz com que a caixa fique presa ao cartão */
+  position: absolute; 
+
+   /* Coloca a posição inicial da caixa que vai subir */
+  bottom: -170px;
+
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px); /* Faz o blur propriamente dito */
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: bottom 0.5s;
+  transition-delay: 0.8s;
+}
+
+.imagens .cartao:hover .descricoes {
+  /* O tanto que a descrição vai subir*/
+  bottom: -40px; 
+  transition-delay: 0s;
+}
+
+.imagens .cartao .descricoes .descricao h3 {
+  color: var(--dark-violet);
+  text-transform:uppercase;
+  font-size: 18px;
+  text-align: center;
+  margin: 5px 0 15px;
+  transform: translateY(-20px);
+}
+
+.imagens .cartao:hover .descricoes .descricao h3 {
+  opacity: 1;
+}
+
+.imagens .cartao .descricoes .descricao h3 span {
+  font-size: 12px;
+  text-transform:uppercase;
 }
