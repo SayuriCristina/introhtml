@@ -101,20 +101,16 @@ p {
   }
 
   iframe{
-    max-width: 300px;
-    height:fit-content;
-    width: fit-content;
+    max-width: 75%;
   }
+
   .formulario{
     padding: 0 15px;
     max-width: 60%;
   }
-  #assunto {
-    max-width: 40%;
-  }
-  .form {
-    display: flex;
-    flex-direction:column;
+
+  .label {
+    width: 100%;
   }
   
 }
@@ -145,6 +141,7 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .formulario {
@@ -152,21 +149,36 @@ iframe {
   background: linear-gradient(var(--dark-violet), var(--medium-violet));
   padding: 15px 40px;
   border-radius: 12px;
-  display: inline-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
 }
 
 #formAssunto {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   gap: 5px;
+  justify-content: center;
+  width: 100%;
+}
+
+#formAssunto textarea{
+  width: 100%;
+  justify-content: center;
+}
+
+.label {
+  width: 100%;
 }
 
 #nome,
 #email,
 #assunto {
-  border: 3px solid var(--soft-lilac);
+  border: 3px solid var(--soft-violet);
   border-radius: 6px;
-  margin-bottom: 10px;
+  margin: 5px 0;
 }
 
 button:hover {
