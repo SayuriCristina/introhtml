@@ -39,7 +39,7 @@ function validarEmail() {
 function validarAssunto() {
     let alerta = document.querySelector('.alertaAssunto');
     if (assunto.value.length > 240) {
-        alerta.innerHTML = "O texto é muito grande, por favor digite no máximo 100 caracteres."
+        alerta.innerHTML = "Por favor digite no máximo 100 caracteres."
         assunto.style.backgroundColor = 'gray';
     } else {
         alerta.innerHTML = '';

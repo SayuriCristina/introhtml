@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 :root {
   --soft-violet: #8672cf;
@@ -13,7 +14,7 @@
   margin: 0;
   text-decoration: none;
   list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -34,21 +35,24 @@ body {
   position: fixed;
   align-items: center;
   box-shadow: 0 0px 10px 3px var(--dark-violet);
+  z-index: 1000;
 }
-.menu ul{
+
+.menu ul {
   max-width: 80%;
   justify-content: space-between;
   box-shadow: unset;
 }
+
 .menu a {
   font-family: "Madimi One", system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-  text-decoration: none;
   color: white;
   display: flex;
   align-items: center;
   padding: 5px 0px 0px 10px;
   font-style: italic;
 }
+
 .menu a:hover {
   color: var(--soft-lilac);
 }
@@ -73,7 +77,7 @@ p {
   text-shadow: 0 0 2px 6px var(--dark-violet);
 }
 
-.sobre{
+.sobre {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,24 +91,25 @@ p {
   width: 60%;
   gap: 2em;
 }
-@media screen and (max-width:900px){
-  .conteudo{
+
+@media screen and (max-width:900px) {
+  .conteudo {
     max-width: 600px;
     min-width: 400px;
     flex-direction: column;
   }
 
-  img{
+  img {
     max-width: 300px;
-    height:fit-content;
+    height: fit-content;
     width: fit-content;
   }
 
-  iframe{
+  iframe {
     max-width: 75%;
   }
 
-  .formulario{
+  .formulario {
     padding: 0 15px;
     max-width: 60%;
   }
@@ -112,7 +117,7 @@ p {
   .label {
     width: 100%;
   }
-  
+
 }
 
 .paragrafos {
@@ -164,7 +169,7 @@ iframe {
   width: 100%;
 }
 
-#formAssunto textarea{
+#formAssunto textarea {
   width: 100%;
   justify-content: center;
 }
@@ -226,13 +231,13 @@ button:hover {
   padding: 15px 0 0 0;
 }
 
-#resumo{
+#resumo {
   padding: 10px 0 0 0;
 }
 
 .projetos {
   display: flex;
-  align-items:baseline;
+  align-items: baseline;
   font-style: italic;
   justify-content: space-between;
   margin-top: 10px;
@@ -253,14 +258,16 @@ button:hover {
 
 span {
   color: var(--dark-violet);
+  font-weight: bold;
 }
 
 .certificacao {
   color: var(--dark-violet);
+  font-weight: bold;
 }
 
-.simbolos{
-  white-space: nowrap; 
+.simbolos {
+  white-space: nowrap;
 }
 
 .imagens {
@@ -277,12 +284,16 @@ span {
   flex-direction: column;
 }
 
+.galeria h3{
+  font-family: "Madimi One", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 @media (max-width:900px) {
   .imagens {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      /* Ajusta a tabela */
-      grid-template-rows: repeat(2, auto);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* Ajusta a tabela */
+    grid-template-rows: repeat(2, auto);
   }
 }
 
@@ -308,14 +319,15 @@ span {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center; /* Centraliza a imagem */
+  object-position: center;
+  /* Centraliza a imagem */
 }
 
 .imagens .cartao .descricoes {
   /* Faz com que a caixa fique presa ao cartão */
-  position: absolute; 
+  position: absolute;
 
-   /* Coloca a posição inicial da caixa que vai subir */
+  /* Coloca a posição inicial da caixa que vai subir */
   bottom: -170px;
 
   width: 100%;
@@ -323,7 +335,8 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(15px); /* Faz o blur propriamente dito */
+  backdrop-filter: blur(15px);
+  /* Faz o blur propriamente dito */
   box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: bottom 0.5s;
@@ -332,13 +345,13 @@ span {
 
 .imagens .cartao:hover .descricoes {
   /* O tanto que a descrição vai subir*/
-  bottom: -40px; 
+  bottom: -40px;
   transition-delay: 0s;
 }
 
 .imagens .cartao .descricoes .descricao h3 {
   color: var(--dark-violet);
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-size: 18px;
   text-align: center;
   margin: 5px 0 15px;
@@ -351,5 +364,105 @@ span {
 
 .imagens .cartao .descricoes .descricao h3 span {
   font-size: 12px;
-  text-transform:uppercase;
+  text-transform: uppercase;
+}
+
+footer {
+  margin: 60px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+.botoes {
+  padding: 15px 15px;
+  border-radius: 50px;
+  background: var(--soft-lilac);
+  box-shadow: 0 5px 20px 3px var(--dark-violet);
+  font-family: "Madimi One", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  color: var(--dark-violet);
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  width: 60%;
+}
+
+@media screen and (max-width:900px) {
+  .botoes {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+}
+
+.botoes {
+  padding: 15px 15px;
+  border-radius: 50px;
+  background: var(--soft-lilac);
+  box-shadow: 0 5px 20px 3px var(--dark-violet);
+  font-size: 20px;
+  color: var(--dark-violet);
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.botoes a {
+  font-family: "Madimi One", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--dark-violet);
+  display: flex;
+  border-radius: 50px;
+  justify-content: space-around;
+  width: 85%;
+  padding: 0 5px;
+}
+
+#botaoEmail {
+  background-color: var(--soft-violet);
+  border: 2px dotted var(--dark-violet);
+  box-shadow: 0 0px 5px 0 var(--dark-violet);
+  border-radius: 20px;
+  padding: 5px 7px;
+  font-style: italic;
+
+
+  &:hover {
+    color: var(--soft-lilac);
+    background-color: var(--dark-violet);
+    border: 2px dotted var(--soft-lilac);
+  }
+}
+
+#botaoLinkedin {
+  background-color: var(--soft-violet);
+  border: 2px dashed var(--dark-violet);
+  box-shadow: 0 0px 5px 0 var(--dark-violet);
+  border-radius: 20px;
+  padding: 5px 7px;
+  font-style: italic;
+
+  &:hover {
+    color: var(--soft-lilac);
+    background-color: var(--dark-violet);
+    border: 2px dashed var(--soft-lilac);
+  }
+}
+
+#botaoGithub {
+  background-color: var(--soft-violet);
+  border: 2px solid var(--dark-violet);
+  box-shadow: 0 0px 5px 0 var(--dark-violet);
+  border-radius: 20px;
+  padding: 5px 7px;
+  cursor: pointer;
+  font-style: italic;
+
+  &:hover {
+    color: var(--soft-lilac);
+    background-color: var(--dark-violet);
+    border: 2px solid var(--soft-lilac);
+  }
 }
